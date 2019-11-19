@@ -1,4 +1,4 @@
-let index = 1;
+let index = 0;
 let Data = [];
 
 function OnClickRead() {
@@ -13,24 +13,25 @@ function OnClickRead() {
     email: document.getElementById("Email").value,
     password: document.getElementById("Pass").value
     }
-    window.index = index + 1;
-    window.Data[index].push = [index, entry];
+    window.Data[window.index].push = [window.index, entry];
+    window.index = window.index + 1;
     console.log(entry);
     
 }
 
 function display(){
-    for(i = 1; i <= index; i++){
+    for(i = 0; i < window.Data.length; i++){
         console.log(window.Data[i]);
     }
 }
 
 
 function gender(){
-    let i, gen;
-    for(i = 0; i< G.length; i++){
-        if(){
-            gen = document.getElementsByName(Gender).value;
+    let gen; 
+    let radiovalue = document.getElementsByName('Gender');
+    for(i = 0; i < radiovalue.length; i++){
+        if(radiovalue[i].checked){
+            gen = radiovalue[i].value;
             break;
         }
     }
