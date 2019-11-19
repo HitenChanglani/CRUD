@@ -1,0 +1,34 @@
+table{
+    border: 2px solid black;
+    font-family: Bookman Old Style;
+    border-radius: 6px;
+    border-collapse: collapse;
+    padding: 20px;
+    margin: auto;
+    table-layout: fixed;
+    background-color: #FFF4FF;
+}
+
+td, tr{
+    border: 1px solid black;
+    font-family: Bookman Old Style;
+    padding: 5px;
+    margin: 10px;
+}
+
+h1, h4{
+    font-family: Bookman Old Style;
+    text-align: center;
+}
+
+.textInput{
+    width: 100%;
+}
+
+
+.bg{
+    background-image: url(Gold_coins.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
