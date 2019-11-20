@@ -13,15 +13,15 @@ function OnClickRead() {
     email: document.getElementById("Email").value,
     password: document.getElementById("Pass").value
     }
-    window.Data[window.index].push = [window.index, entry];
-    window.index = window.index + 1;
+    Data.push([index, entry]);
+    index = index + 1;
     console.log(entry);
     
 }
 
 function display(){
-    for(i = 0; i < window.Data.length; i++){
-        console.log(window.Data[i]);
+    for(i = 0; i < Data.length; i++){
+        console.log(Data[i]);
     }
 }
 
