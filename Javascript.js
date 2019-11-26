@@ -37,3 +37,29 @@ function gender(){
     }
     return gen;
 }
+
+function change(){
+    let inputvalue = prompt("Please enter the index number:");
+    for(i = 0; i <= index, i++){
+        if(i === inputvalue){
+            let Val = prompt("Press the following numbers to update profile: 1 for Contact & 2 for E-mail");
+            if(Val === 1){
+                Data[i].entry.con = prompt("Enter 10 digit contact number:");
+                break;
+            }
+            else if(Val === 2){
+                Data[i].entry.email = prompt("Enter new E-mail address:");
+                break;
+            }
+        }
+    }
+}
+
+function DelEntry(){
+    let Delvalue = prompt("Please enter the index number:");
+    for(i = 0; i <= index, i++){
+        if(i === Delvalue){
+            Data.splice(i, 1);
+        }
+    }
+}
