@@ -1,7 +1,7 @@
 let index = 0;
 let Data = [];
 
-function OnClickRead() {
+function OnClickRead(){
     "use strict";
     let entry = {
     fName: document.getElementById("FirstName").value,
@@ -16,7 +16,6 @@ function OnClickRead() {
     Data.push([index, entry]);
     index = index + 1;
     console.log(entry);
-    
 }
 
 function display(){
@@ -40,14 +39,14 @@ function gender(){
 
 function change(){
     let inputvalue = prompt("Please enter the index number:");
-    for(i = 0; i <= index, i++){
-        if(i === inputvalue){
+    for(i = 0; i <= index; i++){
+        if(inputvalue == i){
             let Val = prompt("Press the following numbers to update profile: 1 for Contact & 2 for E-mail");
-            if(Val === 1){
+            if(Val == 1){
                 Data[i].entry.con = prompt("Enter 10 digit contact number:");
                 break;
             }
-            else if(Val === 2){
+            else if(Val == 2){
                 Data[i].entry.email = prompt("Enter new E-mail address:");
                 break;
             }
@@ -57,8 +56,8 @@ function change(){
 
 function DelEntry(){
     let Delvalue = prompt("Please enter the index number:");
-    for(i = 0; i <= index, i++){
-        if(i === Delvalue){
+    for(i = 0; i <= index; i++){
+        if(Delvalue == i){
             Data.splice(i, 1);
         }
     }
