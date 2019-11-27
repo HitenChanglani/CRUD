@@ -43,7 +43,18 @@ function change(){
         if(inputvalue == i){
             let Val = prompt("Press the following numbers to update profile: 1 for Contact & 2 for E-mail");
             if(Val == 1){
-                Data[i][1].con = prompt("Enter 10 digit contact number:");
+                let bool = true;
+                let Mobval;
+                while(bool){
+                    MobVal = prompt("Enter 10 digit contact number:");
+                      if(MobVal.length != 10){
+                          alert("Incorrect input. Please  enter 10 digit valid mobile number!");
+                      }
+                    else if(MobVal.length == 10){
+                        bool = false;
+                    }
+                      }
+                Data[i][1].con = MobVal;
                 break;
             }
             else if(Val == 2){
