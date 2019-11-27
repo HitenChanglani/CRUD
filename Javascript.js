@@ -43,11 +43,11 @@ function change(){
         if(inputvalue == i){
             let Val = prompt("Press the following numbers to update profile: 1 for Contact & 2 for E-mail");
             if(Val == 1){
-                Data[i].entry.con = prompt("Enter 10 digit contact number:");
+                Data[i][1].con = prompt("Enter 10 digit contact number:");
                 break;
             }
             else if(Val == 2){
-                Data[i].entry.email = prompt("Enter new E-mail address:");
+                Data[i][1].email = prompt("Enter new E-mail address:");
                 break;
             }
         }
