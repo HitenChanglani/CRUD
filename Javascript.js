@@ -2,6 +2,10 @@ let index = 0;
 let Data = [];
 
 function OnClickRead(){
+    // include validation before pushing into database
+    // check if password & confirm password are same
+    // include a prompt on submit 
+
     "use strict";
     let entry = {
     fName: document.getElementById("FirstName").value,
@@ -19,6 +23,7 @@ function OnClickRead(){
 }
 
 function display(){
+    // display on html
     for(i = 0; i < Data.length; i++){
         console.log(Data[i]);
     }
@@ -38,6 +43,7 @@ function gender(){
 }
 
 function change(){
+    // check if the accepted input is number or not 
     let inputvalue = prompt("Please enter the index number:");
     for(i = 0; i <= index; i++){
         if(inputvalue == i){
@@ -73,3 +79,6 @@ function DelEntry(){
         }
     }
 }
+
+// dont perform operations on index number 
+// include a unique username
