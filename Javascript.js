@@ -30,13 +30,13 @@ function OnClickRead(){
     }
     else{ v2 = true;}
 
-    if(entry.con.length != 10 && typeof(entry.con) != "number"){
+    if(entry.con.length != 10 || UniqueValue(1)){
         v3 = false;
         alert("Please enter a valid contact number!");
     }
     else{ v3 = true;}
 
-    if(entry.TaxID.length != 12 && typeof(entry.TaxID) != "number"){
+    if(entry.TaxID.length != 12 || UniqueValue(2)){
         v4 = false;
         alert("Please enter a valid Tax ID!");
     }
@@ -48,13 +48,13 @@ function OnClickRead(){
     }
     else{v5 = true;}
 
-    if(entry.uName == ""){
+    if(entry.uName == "" || UniqueValue(3)){
         v6 = false;
         alert("Please enter a valid Username!");
     }
     else{ v6 = true;}
 
-    if(entry.email == ""){
+    if(entry.email == "" || UniqueValue(4)){
         v7 = false;
         alert("Please enter a valid e-mail ID!");
     }
@@ -138,5 +138,91 @@ function DelEntry(){
             Data.splice(i, 1);
             break;
         }
+    }
+}
+
+function UniqueValue(arg){
+    let z, univalue;
+    switch(arg){
+        case 1:
+            univalue = document.getElementById("Contact").value;
+            if(Data.length == 0){
+                return false;
+                break;
+            }
+            else{
+                for(i = 0; i < index; i++){
+                    if(univalue == Data[i][1].con){
+                        alert("This mobile number is already registered!");
+                        z = i;
+                        break;
+                    }
+                }
+                if(z >= 0 && z <= index){
+                    return true;
+                }
+                else{return false;}
+            }
+            break;
+        case 2:
+            univalue = document.getElementById("TaxID").value;
+            if(Data.length == 0){
+                return false;
+                break;
+            }
+            else{
+                for(i = 0; i < index; i++){
+                    if(univalue == Data[i][1].TaxID){
+                        alert("There is already an account associated with this Tax ID!");
+                        z = i;
+                        break;
+                    }
+                }
+                if(z >= 0 && z <= index){
+                    return true;
+                }
+                else{return false;}
+            }
+            break;
+        case 3:
+            univalue = document.getElementById("Username").value;
+            if(Data.length == 0){
+                return false;
+                break;
+            }
+            else{
+                for(i = 0; i < index; i++){
+                    if(univalue == Data[i][1].uName){
+                        alert("This Username has already been taken!");
+                        z = i;
+                        break;
+                    }
+                }
+                if(z >= 0 && z <= index){
+                    return true;
+                }
+                else{return false;}
+            }
+            break;
+        case 4:
+            univalue = document.getElementById("Email").value;
+            if(Data.length == 0){
+                return false;
+                break;
+            }
+            else{
+                for(i = 0; i < index; i++){
+                    if(univalue == Data[i][1].email){
+                        alert("This e-mail ID is already registered!");
+                        z = i;
+                        break;
+                    }
+                }
+                if(z >= 0 && z <= index){
+                    return true;
+                }
+                else{return false;}
+            }
+            break;
     }
 }
