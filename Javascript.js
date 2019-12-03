@@ -1,10 +1,12 @@
 let index = 0;
 let Data = [];
 
+//Function to create an entry in the database
 function OnClickRead(){
     "use strict";
     let a, v1, v2, v3, v4, v5, v6, v7, v8;
 
+    //Values to be displayed
     let entry = {
         fName: document.getElementById("FirstName").value,
         lName: document.getElementById("LastName").value,
@@ -18,6 +20,8 @@ function OnClickRead(){
     let confpwd = document.getElementById("cnf").value;
     let password = document.getElementById("Pass").value;
 
+    
+    //A check to validate the data entered by the user
     if(entry.fName == ""){
         v1 = false;
         alert("Please enter a valid First Name!");
@@ -69,6 +73,7 @@ function OnClickRead(){
     a = v1 & v2 & v3 & v4 & v5 & v6 & v7 & v8;
 
 
+    //To push the values to the database
     if(a){
         let x = confirm("Are you sure you want to submit?");
         if(x){
@@ -80,6 +85,7 @@ function OnClickRead(){
 
 }
 
+//Function to read all the entries from the database
 function display(){
     for(i = 0; i < Data.length; i++){
         console.log(Data[i]);
@@ -87,6 +93,7 @@ function display(){
 }
 
 
+//Function to get the gender entered by the user
 function gender(){
     let gen; 
     let radiovalue = document.getElementsByName('Gender');
@@ -99,6 +106,7 @@ function gender(){
     return gen;
 }
 
+//Function to update values of a particular entry in the database
 function change(){
     let inputvalue = prompt("Please enter the Username:");
     for(i = 0; i <= index; i++){
@@ -131,6 +139,7 @@ function change(){
     }
 }
 
+//Function to delete entry from the database
 function DelEntry(){
     let Delvalue = prompt("Please enter the Username:");
     for(i = 0; i <= index; i++){
@@ -141,9 +150,12 @@ function DelEntry(){
     }
 }
 
+//Function to check if the values entered are unique
 function UniqueValue(arg){
     let z, univalue;
     switch(arg){
+        
+        //This case checks if the mobile entered is previously registered with the system
         case 1:
             univalue = document.getElementById("Contact").value;
             if(Data.length == 0){
@@ -164,6 +176,8 @@ function UniqueValue(arg){
                 else{return false;}
             }
             break;
+        
+        //This case checks if the TaxID entered is previously registered with the system
         case 2:
             univalue = document.getElementById("TaxID").value;
             if(Data.length == 0){
@@ -184,6 +198,8 @@ function UniqueValue(arg){
                 else{return false;}
             }
             break;
+        
+        //This case checks if the Username entered is previously registered with the system
         case 3:
             univalue = document.getElementById("Username").value;
             if(Data.length == 0){
@@ -204,6 +220,8 @@ function UniqueValue(arg){
                 else{return false;}
             }
             break;
+        
+        //This case checks if the e-mail ID entered is previously registered with the system
         case 4:
             univalue = document.getElementById("Email").value;
             if(Data.length == 0){
