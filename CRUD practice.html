@@ -17,23 +17,23 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <div>
-            <form>
+            <form id = "myForm">
                 <table style = "width: 60%">
                     <tr>
                         <td><b>First Name:</b></td>
-                        <td colspan = "3"><input type = "text" name = "firstName" class = "textInput" id = "FirstName"></td>
+                        <td colspan = "3"><input type = "text" name = "firstName" required class = "textInput" id = "FirstName"></td>
                     </tr>
                     <tr>
                         <td><b>Last Name:</b></td>
-                        <td colspan = "3"><input type = "text" name = "lastName" class = "textInput" id = "LastName"></td>
+                        <td colspan = "3"><input type = "text" name = "lastName" required class = "textInput" id = "LastName"></td>
                     </tr>
                     <tr>
                         <td><b>Contact:</b></td>
-                        <td colspan = "3"><input type = "number" name = "MobileNo" class = "textInput" id = "Contact"></td>
+                        <td colspan = "3"><input type = "number" maxlength = "10" name = "MobileNo" required class = "textInput" id = "Contact"></td>
                     </tr>
                     <tr>
                         <td><b>Tax ID:</b></td>
-                        <td colspan = "3"><input type = "number" name = "taxID" class = "textInput" id = "TaxID"></td>
+                        <td colspan = "3"><input type = "number" name = "taxID" required class = "textInput" id = "TaxID"></td>
                     </tr>
                     <tr>
                         <td><b>Gender:</b></td>
@@ -43,19 +43,19 @@
                     </tr>
                     <tr>
                         <td><b>Username:</b></td>
-                        <td colspan = "3"><input type = "text" name = "username" class = "textInput" id = "Username"></td>
+                        <td colspan = "3"><input type = "text" name = "username" required class = "textInput" id = "Username"></td>
                     </tr>
                     <tr>
                         <td><b>E-mail:</b></td>
-                        <td colspan = "3"><input type = "email" name = "email" class = "textInput" id = "Email"></td>
+                        <td colspan = "3"><input type = "email" name = "email" required class = "textInput" id = "Email"></td>
                     </tr>
                     <tr>
                         <td><b>Password:</b></td>
-                        <td colspan = "3"><input type = "password" name = "password" class = "textInput" id = "Pass"></td>
+                        <td colspan = "3"><input type = "password" name = "password" required class = "textInput" id = "Pass"></td>
                     </tr>
                     <tr>
                         <td><b>Re-enter Password:</b></td>
-                        <td colspan = "3"><input type = "password" name = "confirmPassword" class = "textInput"></td>
+                        <td colspan = "3"><input type = "password" name = "confirmPassword" required class = "textInput" id = "cnf"></td>
                     </tr>
                     <tr>
                         <td><button onclick = "OnClickRead()" type = "button" class = "btn btn-primary"><b>Submit</b></button></td>
