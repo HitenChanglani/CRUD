@@ -3,6 +3,10 @@ let Data = [];
 
 //Function to create an entry in the database
 function OnClickRead(){
+    // include validation before pushing into database
+    // check if password & confirm password are same
+    // include a prompt on submit 
+
     "use strict";
     let a, v1, v2, v3, v4, v5, v6, v7, v8;
 
@@ -87,6 +91,7 @@ function OnClickRead(){
 
 //Function to read all the entries from the database
 function display(){
+    // display on html
     for(i = 0; i < Data.length; i++){
         console.log(Data[i]);
     }
@@ -150,6 +155,8 @@ function DelEntry(){
     }
 }
 
+// dont perform operations on index number 
+// include a unique username
 //Function to check if the values entered are unique
 function UniqueValue(arg){
     let z, univalue;
@@ -244,3 +251,18 @@ function UniqueValue(arg){
             break;
     }
 }
+
+/*Good Work! 
+Congratulations on your first git project 
+The code is well written. However, some things are not working properly
+1. Email id validation is missing
+2. Remove the increment thing on tax id & contact number
+3. Try to use popups instead of alerts
+4. Avoid multiple alerts. Try to write a logic which rejects the entry when the first validation fails
+5. Blank the fields when the form is submitted
+6. Include a submitted successfully message when the entry is accepted
+7. When the same form is submitted again, weird behavior is observed
+8. Include a "Invalid username" message when the username doesnt exist
+9. Use regex for email validation
+10. Great start, Keep it up! :)
+ */
